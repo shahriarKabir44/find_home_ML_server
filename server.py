@@ -14,9 +14,9 @@ def predict(data):
     result = model.predict(df)
 
     if result.any() == 1:
-        return {"message": "Loan will be approved!"}
+        return {"outcome": 1}
     else:
-        return {"message": "Loan will not be approved!"}
+        return {"outcome": 0}
 
 
 class MyServer(BaseHTTPRequestHandler):
